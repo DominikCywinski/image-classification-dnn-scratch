@@ -2,7 +2,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import h5py
 import pickle
-
 from PIL import Image
 
 np.random.seed(1)
@@ -436,7 +435,7 @@ def L_layer_model(X, Y, layers_dims, learning_rate=0.01, num_iterations=1000, pr
     return parameters
 
 
-def predict(X, y, parameters):
+def predict(X, parameters, y=None):
     """
     Predict the results of a L-layer neural network.
 
@@ -453,6 +452,7 @@ def predict(X, y, parameters):
     predicts, caches = L_model_forward(X, parameters)
     predicts[0, :] = predicts[0, :] > 0.5
 
-    # print("Accuracy: " + str(np.sum((predicts == y) / m)))
+    if y is not None:
+        print("Accuracy: " + str(np.sum((predicts == y) / m)))
 
     return predicts

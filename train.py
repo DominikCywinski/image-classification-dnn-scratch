@@ -1,5 +1,4 @@
 import numpy as np
-
 from image_classification_utils import load_data, L_layer_model, save_model
 
 

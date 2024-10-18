@@ -24,10 +24,15 @@ This repository contains an implementation of a Deep Neural Network (DNN) for cl
    python train.py
    ```
    
-2. Place your .png in the ./predict_data directory (optional)
+2. Get evaluation results:
+   ```bash
+   python evaluate.py
+   ```
+   
+3. Place your .png in the ./predict_data directory (optional)
 
-3. Make predictions:
-  ```bash
+4. Make predictions:
+   ```bash
    python predict.py
    ```
 

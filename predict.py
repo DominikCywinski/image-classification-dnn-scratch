@@ -19,7 +19,7 @@ if __name__ == "__main__":
             png_path = os.path.join(folder_path, file_name)
             image, converted_image = convert_image(png_path, org_size)
 
-            my_predicted_image = predict(converted_image, 1, parameters)
+            my_predicted_image = predict(converted_image, parameters)
 
             plt.imshow(image)
             plt.title(classes[int(np.squeeze(my_predicted_image)),].decode("utf-8"))
